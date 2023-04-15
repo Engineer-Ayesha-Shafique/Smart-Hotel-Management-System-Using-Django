@@ -1,0 +1,110 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block css %}
+ <style>
+        .progress {
+            width: 150px;
+            height: 150px;
+            background: none;
+            position: relative;
+        }
+
+        .progress::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 6px solid #eee;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .progress>span {
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+        }
+
+        .progress .progress-left {
+            left: 0;
+        }
+
+        .progress .progress-bar {
+            width: 100%;
+            height: 100%;
+            background: none;
+            border-width: 6px;
+            border-style: solid;
+            position: absolute;
+            top: 0;
+        }
+
+        .progress .progress-left .progress-bar {
+            left: 100%;
+            border-top-right-radius: 80px;
+            border-bottom-right-radius: 80px;
+            border-left: 0;
+            -webkit-transform-origin: center left;
+            transform-origin: center left;
+        }
+
+        .progress .progress-right {
+            right: 0;
+        }
+
+        .progress .progress-right .progress-bar {
+            left: -100%;
+            border-top-left-radius: 80px;
+            border-bottom-left-radius: 80px;
+            border-right: 0;
+            -webkit-transform-origin: center right;
+            transform-origin: center right;
+        }
+
+        .progress .progress-value {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+
+        body {
+            min-height: 100vh;
+        }
+
+        .rounded-lg {
+            border-radius: 1rem;
+        }
+
+        .text-gray {
+            color: #aaa;
+        }
+
+        div.h4 {
+            line-height: 1rem;
+        }
+    </style>
+{% endblock css %}
+
+
+{% block body %}
+    <div class="container-fluid">
+      <div class="row justify-content-center" style="margin-top:20px;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13596.071789686277!2d74.3574117!3d31.5785557!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x927b40170bb6804c!2sDepartment%20of%20Computer%20Science%20-%20UET%20Lahore!5e0!3m2!1sen!2s!4v1672635267504!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="row justify-content-center" style="margin-top:20px;">
+
+        <ul>
+          <li>Located on Shalamar Bagh</li>
+          <li>Do not park across the street from us! </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+{% endblock body %}
